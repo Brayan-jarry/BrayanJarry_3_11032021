@@ -1,0 +1,74 @@
+@font-face
+{
+	    font-family: 'Roboto-Regular';
+	src: url('../police/roboto/Roboto-Regular.ttf');
+	src: url('../police/roboto/Roboto-Regular.eot') format('eot'),
+	url('../police/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../police/roboto/Roboto-Regular.woff2') format('woff2'),
+	url('../police/roboto/Roboto-Regular.woff') format('woff'),
+	url('../police/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+
+@font-face
+{
+	    font-family: 'Roboto-Thin';
+	src: url('../police/roboto/Roboto-Thin.ttf');
+	src: url('../police/roboto/Roboto-Thin.eot') format('eot'),
+	url('../police/roboto/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+	url('../police/roboto/Roboto-Thin.woff2') format('woff2'),
+	url('../police/roboto/Roboto-Thin.woff') format('woff'),
+	url('../police/roboto/Roboto-Thin.svg#Roboto-Thin') format('svg');
+}
+
+@font-face
+{
+	    font-family: 'Roboto-Bold';
+	src: url('../police/roboto/Roboto-Bold.ttf');
+	src: url('../police/roboto/Roboto-Bold.eot') format('eot'),
+	url('../police/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../police/roboto/Roboto-Bold.woff2') format('woff2'),
+	url('../police/roboto/Roboto-Bold.woff') format('woff'),
+	url('../police/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
+}
+
+@font-face
+{
+	    font-family: 'Shrikhand';
+	src: url('../police/shrikhand/Shrikhand-Regular.ttf');
+	src: url('../police/shrikhand/Shrikhand-Regular.eot') format('eot'),
+	url('../police/shrikhand/Shrikhand-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../police/shrikhand/Shrikhand-Regular.woff2') format('woff2'),
+	url('../police/shrikhand/Shrikhand-Regular.woff') format('woff'),
+	url('../police/shrikhand/Shrikhand-Regular.svg#Shrikhand-Regular') format('svg');
+}
+
+body
+{
+    font-family: Roboto-thin, sans-serif;
+}
+
+h1, h2, h3 
+{
+    font-family: Roboto-Bold, sans-serif;
+}
+
+.menuNavigation_btn, .Reservation_btn
+{
+    font-family: Roboto-Regular, sans-serif;
+}
+
+img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+figure
+{
+	margin: 0;
+}
+
+a
+{
+	text-decoration: none;
+}

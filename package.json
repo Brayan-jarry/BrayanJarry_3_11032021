@@ -1,0 +1,19 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brayan-jarry/BrayanJarry_3_11032021.git"
+  },
+  "author": "Brayan Jarry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brayan-jarry/BrayanJarry_3_11032021/issues"
+  },
+  "homepage": "https://github.com/Brayan-jarry/BrayanJarry_3_11032021#readme"
+}

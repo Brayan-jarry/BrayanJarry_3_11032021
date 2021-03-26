@@ -1,0 +1,90 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+body
+{   
+    @include mobile-only
+    {
+        display: grid;
+        grid-template-rows: 15% 70% 10%;
+    }
+
+    header
+    {
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr 3fr;
+
+        #localisation
+        {
+            border-top: grey solid 3px;
+            background-color: rgb(190, 190, 190);
+        }
+
+        #reservation
+        {
+            background-color: $color-background;
+
+            .reservation_btn
+            {
+                background-color: $color-secondary;
+                border-radius: 100px;
+                color: white;
+            }
+        }
+    }
+
+   main
+   {
+        #menuNavigation
+        {
+            .menuNavigation_btn
+            {
+                display: flex;
+                flex-direction: row;
+                background-color: $color-background;
+                padding-left: 1em;
+                margin-bottom: 1.5em;
+                border-radius: 25px;
+                
+                &_icone
+                {
+                    padding-top: 1em;
+                    margin-right: 1em;
+                }
+            }
+        }
+
+       #restaurants
+       {
+            background-color: $color-background;
+
+            .restaurants_element
+            {
+                border-radius: 30px;
+                background-color: white;
+                margin: 1em;
+
+                a
+                {
+                    display: grid;
+                    grid-template-rows: 60% 40%;
+
+                     &_info
+                    {
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+
+                        &_icone
+                        {
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+
+               
+            }
+        }
+   }
+}
