@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+
+header
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+         #logo
+        {
+            width: 60%;
+            height: 60%;
+        }
+
+    #localisation
+    {
+        border-top: rgb(148, 147, 147) solid 3px;
+        background-color: rgb(207, 207, 207);
+
+        .localisation_icone
+        {
+            margin-right: 1em;
+        }
+    }
+
+    #reservation
+    {
+        background-color: $color-background;
+        padding: 1em;
+
+        .reservation_btn
+        {
+            background-color: $color-secondary;
+            box-shadow: 6px 6px 0px $color-primary;
+            border-radius: 100px;
+            color: white;
+        }
+    }
+}

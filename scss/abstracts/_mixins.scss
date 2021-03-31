@@ -7,3 +7,12 @@
         @content;
     }
 }
+
+@mixin tablette-only 
+{
+    @media screen and (max-width: map-get($break-points, tablette))
+    {
+        @content;
+    }
+}
+

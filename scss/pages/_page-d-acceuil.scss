@@ -1,37 +1,12 @@
-@import "../utils/variables";
-@import "../utils/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 body
 {   
     @include mobile-only
     {
-        display: grid;
-        grid-template-rows: 15% 70% 10%;
-    }
-
-    header
-    {
-        text-align: center;
-        display: grid;
-        grid-template-rows: 1fr 1fr 3fr;
-
-        #localisation
-        {
-            border-top: grey solid 3px;
-            background-color: rgb(190, 190, 190);
-        }
-
-        #reservation
-        {
-            background-color: $color-background;
-
-            .reservation_btn
-            {
-                background-color: $color-secondary;
-                border-radius: 100px;
-                color: white;
-            }
-        }
+        display: flex;
+        flex-direction: column;
     }
 
    main
@@ -44,8 +19,23 @@ body
                 flex-direction: row;
                 background-color: $color-background;
                 padding-left: 1em;
+                padding-top: 0.8em;
                 margin-bottom: 1.5em;
-                border-radius: 25px;
+                border-radius: 10px;
+
+                &_numero
+                {
+                    margin-left: -1.2em;
+                    margin-right: 2em;
+                    color: white;
+                    background-color: $color-primary;
+                    border-radius: 180px;
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
                 
                 &_icone
                 {
@@ -58,32 +48,52 @@ body
        #restaurants
        {
             background-color: $color-background;
+            padding: 1em;
 
             .restaurants_element
             {
-                border-radius: 30px;
+                border-radius: 15px;
                 background-color: white;
-                margin: 1em;
+                margin-top: 1em;
+                margin-bottom: 1em;
 
-                a
+                .restaurants_element_a
                 {
                     display: grid;
                     grid-template-rows: 60% 40%;
 
-                     &_info
+                    .restaurants_element_img
+                    {
+                       img
+                       {
+                           height: 150px;
+                           width: 100%;
+                           object-fit: cover;
+                           border-top-left-radius: 15px;
+                           border-top-right-radius: 15px;
+                       }
+                    }
+
+                    .restaurants_element_info
                     {
                         display: grid;
                         grid-template-columns: 3fr 1fr;
 
-                        &_icone
+                        &_nom
                         {
+                            padding-left: 0.8em;
+                        }
+
+                        .restaurants_element_info_icone
+                        {
+                            display: flex;
                             justify-content: center;
                             align-items: center;
+                            font-size: 2em;
                         }
                     }
                 }
 
-               
             }
         }
    }
