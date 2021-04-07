@@ -1,0 +1,31 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+header
+{
+    display: flex;
+    flex-direction: column;
+
+    #icone_logo
+    {
+        @include center;
+
+        a
+        {
+            @include center;
+            .icone
+            {
+                width: 2em;
+                height: 2em;
+            }
+        }
+
+        
+
+        .logo
+        {
+            margin-left: 1.3em;
+            width: 15em;
+        }
+    }
+}

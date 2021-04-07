@@ -1,18 +1,20 @@
 @import "./maps";
 
-@mixin mobile-only 
-{
-    @media screen and (max-width: map-get($break-points, mobile))
-    {
-        @content;
+@mixin respondTo($breakpoint) {
+    @if ($breakpoint == mobile) {
+        @media (max-width: map-get($break-points, mobile)) {
+            @content;
+        }
+    }
+    @if ($breakpoint == tablette) {
+        @media (max-width: map-get($break-points, tablette)) {
+            @content;
+        }
     }
 }
 
-@mixin tablette-only 
-{
-    @media screen and (max-width: map-get($break-points, tablette))
-    {
-        @content;
-    }
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-

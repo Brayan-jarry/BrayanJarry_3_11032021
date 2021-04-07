@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 header
 {
@@ -27,11 +28,15 @@ header
     {
         background-color: $color-background;
         padding: 1em;
+        @include center;
+        flex-direction: column;
 
-        .reservation_btn
+        .reservation_lien_btn
         {
-            background-color: $color-secondary;
-            box-shadow: 6px 6px 0px $color-primary;
+            width: 250px;
+            height: 60px;
+            @include center;
+            background: $color-reservation-btn;
             border-radius: 100px;
             color: white;
         }

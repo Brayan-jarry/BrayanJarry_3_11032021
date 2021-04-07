@@ -3,7 +3,7 @@
 
 body
 {   
-    @include mobile-only
+    @include respondTo(mobile)
     {
         display: flex;
         flex-direction: column;
@@ -13,34 +13,37 @@ body
    {
         #menuNavigation
         {
+            margin: 1em;
+
             .menuNavigation_btn
             {
                 display: flex;
-                flex-direction: row;
+                align-items: center;
                 background-color: $color-background;
-                padding-left: 1em;
-                padding-top: 0.8em;
+                padding: 1em 0 1em 1em;
                 margin-bottom: 1.5em;
                 border-radius: 10px;
 
                 &_numero
                 {
-                    margin-left: -1.2em;
-                    margin-right: 2em;
+                    position: relative;
+                    left: -1.5em;
                     color: white;
                     background-color: $color-primary;
                     border-radius: 180px;
                     width: 25px;
                     height: 25px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include center;
                 }
                 
                 &_icone
                 {
-                    padding-top: 1em;
                     margin-right: 1em;
+                }
+
+                p
+                {
+                    margin: 0;
                 }
             }
         }
@@ -86,9 +89,7 @@ body
 
                         .restaurants_element_info_icone
                         {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @include center;
                             font-size: 2em;
                         }
                     }

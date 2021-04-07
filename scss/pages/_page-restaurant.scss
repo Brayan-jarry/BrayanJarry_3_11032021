@@ -1,0 +1,13 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+section
+{
+    background-color: $color-background;
+
+    .menu_du_restaurant
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
