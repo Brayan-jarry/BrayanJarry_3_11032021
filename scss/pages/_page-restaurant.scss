@@ -4,10 +4,82 @@
 section
 {
     background-color: $color-background;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 1em;
+
+    #section_titre
+    {
+        display: grid;
+        grid-template-columns: 90% 10%;
+
+        .section_titre_icone
+        {
+            @include center;
+        }
+    }
 
     .menu_du_restaurant
     {
         display: flex;
         flex-direction: column;
+
+        h2
+        {
+            text-decoration: underline solid $color-tertiary;
+        }
+
+        .menu_du_restaurant_choix
+        {
+            display: flex;
+            flex-direction: column;
+
+            .menu_du_restaurant_choix_btn
+            {
+                background-color: white;
+                border-radius: 25px;
+                padding-right: 1em;
+                padding-left: 1em;
+                margin-bottom: 1em;
+                display: flex;
+                align-items: flex-end;
+
+                .menu_du_restaurant_choix_btn_titre
+                {
+                    h3
+                    {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    p
+                    {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+
+                .menu_du_restaurant_choix_btn_prix
+                {
+                    font-weight: bold;
+                }
+
+                .menu_du_restaurant_choix_btn--check
+                {
+                    background-color: green;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    overflow: hidden;
+                    width: 0;
+                }
+            }
+        }
+    }
+
+    .reservation_lien
+    {
+        @include center;
     }
 }

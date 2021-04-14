@@ -1,0 +1,44 @@
+@font-face
+{
+	    font-family: 'Roboto-Regular';
+	src: url('../police/roboto/Roboto-Regular.ttf');
+}
+
+@font-face
+{
+	    font-family: 'Roboto-Thin';
+	src: url('../police/roboto/Roboto-Thin.ttf');
+}
+
+@font-face
+{
+	    font-family: 'Roboto-Bold';
+	src: url('../police/roboto/Roboto-Bold.ttf');
+}
+
+@font-face
+{
+	    font-family: 'Shrikhand';
+	src: url('../police/shrikhand/Shrikhand-Regular.otf');
+}
+
+body, h2
+{
+    font-family: Roboto-Thin, sans-serif;
+}
+
+h1
+{
+    font-family: Shrikhand, sans-serif;
+}
+
+h3
+{
+    font-family: Roboto-Bold, sans-serif;
+}
+
+.logo_pied_de_page
+{
+	font-family: Shrikhand, sans-serif;
+	font-size: large;
+}

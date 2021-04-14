@@ -8,7 +8,8 @@ header
 
     #icone_logo
     {
-        @include center;
+        display: flex;
+        align-items: flex-start;
 
         a
         {
@@ -24,8 +25,8 @@ header
 
         .logo
         {
-            margin-left: 1.3em;
-            width: 15em;
+            margin-left: 1.2em;
+            width: 12em;
         }
     }
 }

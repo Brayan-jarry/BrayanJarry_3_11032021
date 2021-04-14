@@ -1,4 +1,7 @@
+@import "./base/normalize";
 @import "./base/box-sizing";
-@import "./base/police";
+@import "./base/police-restaurant";
 @import "./layout/header";
 @import "./layout/footer";
+@import "./composants/btn";
+@import "./pages/page-restaurant";
