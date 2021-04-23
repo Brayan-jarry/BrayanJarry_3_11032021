@@ -10,14 +10,15 @@ header
     {
         display: flex;
         align-items: flex-start;
+        padding: 0.5rem 0;
 
         a
         {
-            @include center;
             .icone
             {
                 width: 2em;
                 height: 2em;
+                @include center;
             }
         }
 

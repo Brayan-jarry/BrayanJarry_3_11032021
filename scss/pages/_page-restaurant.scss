@@ -7,6 +7,8 @@ section
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding: 1em;
+    position: relative;
+    margin-top: -3rem;
 
     #section_titre
     {
@@ -16,17 +18,19 @@ section
         .section_titre_icone
         {
             @include center;
+            font-size: 2em;
         }
     }
 
     .menu_du_restaurant
     {
-        display: flex;
-        flex-direction: column;
 
         h2
         {
-            text-decoration: underline solid $color-tertiary;
+            display: inline-block;
+            border-bottom: 2px solid $color-tertiary;
+            padding-bottom: 5px;
+            width: 2.5rem;
         }
 
         .menu_du_restaurant_choix
@@ -37,42 +41,76 @@ section
             .menu_du_restaurant_choix_btn
             {
                 background-color: white;
-                border-radius: 25px;
-                padding-right: 1em;
-                padding-left: 1em;
-                margin-bottom: 1em;
                 display: flex;
-                align-items: flex-end;
-
-                .menu_du_restaurant_choix_btn_titre
+                border-radius: 25px;
+                margin-bottom: 1em;
+                &:hover
                 {
-                    h3
+                    :nth-child(2)
+                    {
+                        transform: scale(1)
+                    }
+                }
+
+                .menu_du_restaurant_choix_btn_conteneur
+                {
+                    display: flex;
+                    align-items: flex-end;
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 0 0.5em;
+                    justify-content: space-between;
+
+                    .menu_du_restaurant_choix_btn_conteneur_titre
                     {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
+
+                        h3
+                        {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        p
+                        {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
                     }
 
-                    p
+                    .menu_du_restaurant_choix_btn_conteneur_prix
                     {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        font-weight: bold;
+                        padding: 0 0.5rem;
                     }
                 }
 
-                .menu_du_restaurant_choix_btn_prix
-                {
-                    font-weight: bold;
-                }
+                
 
                 .menu_du_restaurant_choix_btn--check
                 {
-                    background-color: green;
+                    background-color: $color-tertiary;
                     border-top-right-radius: 25px;
                     border-bottom-right-radius: 25px;
                     overflow: hidden;
-                    width: 0;
+                    width: 2em;
+                    @include center;
+                    transform: scale(0);
+                    transition-property: transform;
+                    transition-duration: 1s;
+                    .menu_du_restaurant_choix_btn--check_icone
+                    {
+                        background-color: white;
+                        border-radius: 360px;
+                        width: 20px;
+                        height: 20px;
+                        color: $color-tertiary;
+                        @include center;
+                    }
                 }
             }
         }
