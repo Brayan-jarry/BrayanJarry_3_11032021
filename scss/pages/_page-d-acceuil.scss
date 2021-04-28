@@ -59,11 +59,23 @@ body
                 background-color: white;
                 margin-top: 1em;
                 margin-bottom: 1em;
+                display: grid;
+                grid-template-rows: 60% 40%;
+
+                .restaurants_element_conteneur
+                {
+                    display: grid;
+                    grid-template-columns: 70% 30%;    
+                    
+                    .restaurants_element_icone
+                        {
+                            @include center;
+                            font-size: 2em;
+                        }
+                }
 
                 .restaurants_element_a
                 {
-                    display: grid;
-                    grid-template-rows: 60% 40%;
 
                     .restaurants_element_img
                     {
@@ -87,11 +99,7 @@ body
                             padding-left: 0.8em;
                         }
 
-                        .restaurants_element_info_icone
-                        {
-                            @include center;
-                            font-size: 2em;
-                        }
+                    
                     }
                 }
 

@@ -44,11 +44,19 @@ section
                 display: flex;
                 border-radius: 25px;
                 margin-bottom: 1em;
+                transition: transform 1s;
+                transform: translateY(50px);
+
+                &:enabled
+                {
+                    transform: translateY(0px);
+                }
+
                 &:hover
                 {
                     :nth-child(2)
                     {
-                        transform: scale(1)
+                        transform: scaleX(1)
                     }
                 }
 
@@ -97,11 +105,11 @@ section
                     border-top-right-radius: 25px;
                     border-bottom-right-radius: 25px;
                     overflow: hidden;
-                    width: 2em;
+                    width: 40px;
                     @include center;
-                    transform: scale(0);
-                    transition-property: transform;
-                    transition-duration: 1s;
+                    transition: transform 1s;
+                    transform: scaleX(0);
+
                     .menu_du_restaurant_choix_btn--check_icone
                     {
                         background-color: white;
