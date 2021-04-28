@@ -89,17 +89,9 @@ body
                        }
                     }
 
-                    .restaurants_element_info
+                    .restaurants_element_nom
                     {
-                        display: grid;
-                        grid-template-columns: 3fr 1fr;
-
-                        &_nom
-                        {
                             padding-left: 0.8em;
-                        }
-
-                    
                     }
                 }
 
