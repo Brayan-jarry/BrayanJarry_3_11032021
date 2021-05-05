@@ -30,15 +30,5 @@ header
         padding: 1em;
         @include center;
         flex-direction: column;
-
-       /* .reservation_lien_btn
-        {
-            width: 250px;
-            height: 60px;
-            @include center;
-            background: $color-reservation-btn;
-            border-radius: 100px;
-            color: white;
-        }*/
     }
 }

@@ -64,14 +64,32 @@ body
 
                 .restaurants_element_conteneur
                 {
-                    display: grid;
-                    grid-template-columns: 70% 30%;    
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
                     
                     .restaurants_element_icone
+                    {
+                        @include center;
+                        font-size: 2em;
+                        padding-right: 0.5em;
+                   
+                    }
+
+                    .restaurants_element_icone--pleine
+                    {
+                        font-size: 2.1em;
+                        color: $color-primary;
+                        position: absolute;
+                        right: 15px;
+                        top: 33px;
+                        transition: opacity 1s;
+                        opacity: 0;
+                        &:hover
                         {
-                            @include center;
-                            font-size: 2em;
+                            opacity: 1;
                         }
+                    }
                 }
 
                 .restaurants_element_a

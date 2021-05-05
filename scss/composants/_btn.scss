@@ -1,3 +1,4 @@
+
 .reservation_lien_btn
         {
             width: 250px;
@@ -6,4 +7,12 @@
             background: $color-reservation-btn;
             border-radius: 100px;
             color: white;
+            transition: all 1s;
+            box-shadow: 5px 5px 5px #cfcfcf;
+
+            &:hover
+            {
+                background-color: lighten($color: $color-reservation-btn, $amount: 50%);
+                box-shadow: 10px 10px 5px darken($color: #cfcfcf, $amount: 60%);
+            }
         }

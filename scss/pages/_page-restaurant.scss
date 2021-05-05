@@ -1,5 +1,6 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
+@import "../abstracts/animation";
 
 section
 {
@@ -38,25 +39,34 @@ section
             display: flex;
             flex-direction: column;
 
+            &:hover
+            {
+                :nth-child(1)
+                {
+                    animation: tanslation-menu_choix 1s;
+                }
+                :nth-child(2)
+                {
+                    animation: tanslation-menu_choix 1s 3s;
+                }
+                :nth-child(3)
+                {
+                    animation: tanslation-menu_choix 1s 6s;
+                }
+            }
+
             .menu_du_restaurant_choix_btn
             {
                 background-color: white;
                 display: flex;
                 border-radius: 25px;
                 margin-bottom: 1em;
-                transition: transform 1s;
-                transform: translateY(50px);
-
-                &:enabled
-                {
-                    transform: translateY(0px);
-                }
 
                 &:hover
                 {
                     :nth-child(2)
                     {
-                        transform: scaleX(1)
+                        width: 60px;
                     }
                 }
 
@@ -105,10 +115,9 @@ section
                     border-top-right-radius: 25px;
                     border-bottom-right-radius: 25px;
                     overflow: hidden;
-                    width: 40px;
                     @include center;
-                    transition: transform 1s;
-                    transform: scaleX(0);
+                    transition: width 750ms;
+                    width: 0;
 
                     .menu_du_restaurant_choix_btn--check_icone
                     {
