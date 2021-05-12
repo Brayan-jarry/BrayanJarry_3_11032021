@@ -1,13 +1,62 @@
-@keyframes tanslation-menu_choix
+@keyframes translation-menu_choix
 {
     from 
     {
-        transform: translateY(-100px);
+        transform: translateY(150px);
         opacity: 0;
     }
     to 
     {
         transform : translateY(0px);
         opacity: 1;
+    }
+}
+
+.restaurants_element_icone--pleine
+{
+    color: $color-primary;
+    transition: opacity 1s;
+    opacity: 0;
+    &:hover
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes spin
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(1440deg);
+    }
+}
+
+@keyframes loader
+{
+    from 
+    {
+        display: block;
+    }
+    to 
+    {
+        display: none;
+    }
+}
+
+@keyframes anti-scroll 
+{
+    from 
+    {
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+    to 
+    {
+        overflow: visible;
+        overscroll-behavior: auto;
     }
 }

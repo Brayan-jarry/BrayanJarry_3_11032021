@@ -10,10 +10,20 @@
             transition: all 1s;
             box-shadow: 5px 5px 5px #cfcfcf;
             opacity: 1;
+            cursor: pointer;
 
             &:hover
             {
                 opacity: 0.5;
                 box-shadow: 10px 10px 5px darken($color: #cfcfcf, $amount: 60%);
             }
+
+            button
+            {
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+
         }

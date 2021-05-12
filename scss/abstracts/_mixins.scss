@@ -1,6 +1,7 @@
 @import "./maps";
 
-@mixin respondTo($breakpoint) {
+@mixin respondTo($breakpoint) 
+{
     @if ($breakpoint == mobile) {
         @media (max-width: map-get($break-points, mobile)) {
             @content;
@@ -8,6 +9,11 @@
     }
     @if ($breakpoint == tablette) {
         @media (max-width: map-get($break-points, tablette)) {
+            @content;
+        }
+    }
+    @if ($breakpoint == desktop) {
+        @media (min-width: map-get($break-points, desktop)) {
             @content;
         }
     }

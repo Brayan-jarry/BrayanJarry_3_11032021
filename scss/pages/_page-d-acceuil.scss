@@ -1,19 +1,43 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
+@import "../abstracts/animation";
+
+html
+{
+    animation: anti-scroll 4s;
+}
+
+#loader_spinner
+{
+    @include center;
+    background-color: white;
+    font-size: 3em;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    animation: loader 4s;
+
+   .loader_spinner_icone
+   {
+       color: $color-primary;
+       animation: spin 4s;
+   }
+}
 
 body
-{   
-    @include respondTo(mobile)
-    {
-        display: flex;
-        flex-direction: column;
-    }
+{ 
 
    main
    {
         #menuNavigation
         {
             margin: 1em;
+            @include respondTo(desktop)
+            {
+                display: flex;
+                justify-content: space-between;
+            }
 
             .menuNavigation_btn
             {
@@ -23,10 +47,26 @@ body
                 padding: 1em 0 1em 1em;
                 margin-bottom: 1.5em;
                 border-radius: 10px;
+                transition: background-color 1.5s;
+                @include respondTo(desktop)
+                {
+                    padding-right: 2em;
+                    padding-left: 1em;
+                }
+
+                &:hover
+                {
+                    background-color: $color-primary;
+                    .menuNavigation_btn_numero
+                    {
+                        background-color: $color-secondary;
+                    }
+                }
 
                 &_numero
                 {
                     position: relative;
+                    z-index: 1;
                     left: -1.5em;
                     color: white;
                     background-color: $color-primary;
@@ -34,6 +74,7 @@ body
                     width: 25px;
                     height: 25px;
                     @include center;
+                    transition: background-color 1.5s;
                 }
                 
                 &_icone
@@ -52,6 +93,12 @@ body
        {
             background-color: $color-background;
             padding: 1em;
+
+            @include respondTo(desktop)
+            {
+                display: grid;
+                grid-template: 50% 50%/ 50% 50%;
+            }
 
             .restaurants_element
             {
@@ -79,16 +126,9 @@ body
                     .restaurants_element_icone--pleine
                     {
                         font-size: 2.1em;
-                        color: $color-primary;
                         position: absolute;
                         right: 15px;
                         top: 33px;
-                        transition: opacity 1s;
-                        opacity: 0;
-                        &:hover
-                        {
-                            opacity: 1;
-                        }
                     }
                 }
 

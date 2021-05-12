@@ -20,6 +20,15 @@ section
         {
             @include center;
             font-size: 2em;
+
+            .restaurants_element_icone--pleine
+            {
+                font-size: 1.1em;
+                position: absolute;
+                right: 14px;
+                top: 38px;
+            }
+
         }
     }
 
@@ -39,20 +48,17 @@ section
             display: flex;
             flex-direction: column;
 
-            &:hover
+            &:nth-child(1)
             {
-                :nth-child(1)
-                {
-                    animation: tanslation-menu_choix 1s;
-                }
-                :nth-child(2)
-                {
-                    animation: tanslation-menu_choix 1s 3s;
-                }
-                :nth-child(3)
-                {
-                    animation: tanslation-menu_choix 1s 6s;
-                }
+                animation: translation-menu_choix 2s ease-in-out;
+            }
+            &:nth-child(2)
+            {
+                animation: translation-menu_choix 2s ease-in-out 3s;
+            }
+            &:nth-child(3)
+            {
+                animation: translation-menu_choix 2s ease-in-out 6s;
             }
 
             .menu_du_restaurant_choix_btn
@@ -64,7 +70,7 @@ section
 
                 &:hover
                 {
-                    :nth-child(2)
+                    .menu_du_restaurant_choix_btn--check
                     {
                         width: 60px;
                     }
