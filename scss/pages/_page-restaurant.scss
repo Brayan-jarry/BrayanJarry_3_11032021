@@ -42,16 +42,7 @@ section
             width: 2.5rem;
         }
 
-           @for $i from 2 to 3
-            {
-                &:nth-child(#{$i}n)
-                {
-                    animation-name: translation-menu_choix;
-                    animation-duration: 2s;
-                    animation-fill-mode: both;
-                    animation-delay:#{$i*1}s;
-                }
-            }
+         
 
         .menu_du_restaurant_choix
         {
@@ -68,6 +59,16 @@ section
                 border-radius: 25px;
                 margin-bottom: 1em;
                 
+                  @for $i from 1 through 4
+            {
+                &:nth-child(#{$i}n)
+                {
+                    animation-name: translation-menu_choix;
+                    animation-duration: 2s;
+                    animation-fill-mode: both;
+                    animation-delay:#{$i*1}s;
+                }
+            }
 
                 &:hover
                 {
