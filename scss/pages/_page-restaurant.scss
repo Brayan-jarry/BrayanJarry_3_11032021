@@ -42,22 +42,24 @@ section
             width: 2.5rem;
         }
 
-        .menu_du_restaurant_choix
-        {
-            display: flex;
-            flex-direction: column;
-            
-
-            @for $i from 1 to 3
+           @for $i from 2 to 3
             {
                 &:nth-child(#{$i}n)
                 {
                     animation-name: translation-menu_choix;
                     animation-duration: 2s;
                     animation-fill-mode: both;
-                    animation-delay:#{$i*2}s;
+                    animation-delay:#{$i*1}s;
                 }
             }
+
+        .menu_du_restaurant_choix
+        {
+            display: flex;
+            flex-direction: column;
+            
+
+         
 
             .menu_du_restaurant_choix_btn
             {
