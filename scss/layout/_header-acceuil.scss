@@ -11,6 +11,12 @@ header
         {
             width: 60%;
             height: 60%;
+            @include respondTo(desktop)
+            {
+                width: auto;
+                height: auto;
+            }
+        
         }
 
     #localisation

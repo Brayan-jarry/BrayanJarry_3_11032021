@@ -8,26 +8,61 @@ header
 
     #icone_logo
     {
-        display: flex;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 5% 95%;
         padding: 0.5rem 0;
 
         a
         {
+            @include center;
+            @include respondTo(mobile)
+            {
+                margin-left: 1em;
+            }
+
             .icone
             {
-                width: 2em;
-                height: 2em;
+                font-size: 1em;
                 @include center;
+                @include respondTo(desktop)
+                {
+                    font-size: 2em;
+                }
+                @include respondTo(tablette)
+                {
+                    font-size: 1.5em;
+                }
             }
         }
 
-        
-
-        .logo
+        .conteneur_logo
         {
-            margin-left: 1.2em;
-            width: 12em;
+            @include center;
+            @include respondTo (mobile)
+            {
+                width: 12em;
+                margin-left: 4rem;
+            }
+    
+        } 
+    }
+    @include respondTo(desktop)
+    {
+        #photo_header
+        {
+            height: 500px;
+            figure 
+            {
+                height: 100%;
+                img 
+                {
+                    height: 100%;
+                    width: max-content;
+                    object-fit: cover;
+                }  
+            }
+        
         }
     }
+  
 }

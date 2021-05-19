@@ -25,8 +25,7 @@ section
             {
                 font-size: 1.1em;
                 position: absolute;
-                right: 14px;
-                top: 38px;
+                @include center;
             }
 
         }
@@ -47,23 +46,17 @@ section
         {
             display: flex;
             flex-direction: column;
+            
 
-            &:nth-child(1)
+            @for $i from 1 to 3
             {
-                animation-name: translation-menu_choix;
-                animation-duration: 2s;
-            }
-            &:nth-child(2)
-            {
-                animation-name: translation-menu_choix;
-                animation-duration: 2s;
-                animation-delay: 2s;
-            }
-            &:nth-child(3)
-            {
-                animation-name: translation-menu_choix;
-                animation-duration: 2s;
-                animation-delay: 4s;
+                &:nth-child(#{$i}n)
+                {
+                    animation-name: translation-menu_choix;
+                    animation-duration: 2s;
+                    animation-fill-mode: both;
+                    animation-delay:#{$i*2}s;
+                }
             }
 
             .menu_du_restaurant_choix_btn
@@ -72,6 +65,7 @@ section
                 display: flex;
                 border-radius: 25px;
                 margin-bottom: 1em;
+                
 
                 &:hover
                 {
