@@ -59,16 +59,16 @@
     0% 
     {
         overflow: hidden;
-        overscroll-behavior: none;
+        /*overscroll-behavior: none;*/
     }
     90%
     {
         overflow: hidden;
-        overscroll-behavior: none;
+       /* overscroll-behavior: none;*/
     }
     100% 
     {
         overflow: visible;
-        overscroll-behavior: auto;
+       /* overscroll-behavior: auto;*/
     }
 }
