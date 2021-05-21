@@ -48,7 +48,9 @@ body
                 padding: 1em 0 1em 1em;
                 margin-bottom: 1.5em;
                 border-radius: 10px;
+                cursor: pointer;
                 transition: background-color 1.5s;
+
                 @include respondTo(desktop)
                 {
                     padding-right: 2em;
