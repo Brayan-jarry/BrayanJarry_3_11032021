@@ -56,12 +56,17 @@ body
                     padding-right: 2em;
                     padding-left: 1em;
                     margin-bottom: 0;
+                    margin-left: 1em;
                     width: 20em;
                 }
 
                 &:hover
                 {
                     background-color: #f8e5f2;
+                    .menuNavigation_btn_icone
+                    {
+                        color: $color-primary;
+                    }
                 }
 
                 &_numero
@@ -81,6 +86,7 @@ body
                 &_icone
                 {
                     margin-right: 1em;
+                    transition: color 1.5s;
                 }
 
                 p
